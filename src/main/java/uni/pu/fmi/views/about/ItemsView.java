@@ -8,11 +8,11 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import uni.pu.fmi.views.MainLayout;
 
-@PageTitle("About")
-@Route(value = "about", layout = MainLayout.class)
-public class AboutView extends VerticalLayout {
+@PageTitle("Items")
+@Route(value = "items", layout = MainLayout.class)
+public class ItemsView extends VerticalLayout {
 
-    public AboutView() {
+    public ItemsView() {
         setSpacing(false);
 
         Image img = new Image("images/empty-plant.png", "placeholder plant");

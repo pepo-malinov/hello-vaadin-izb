@@ -1,15 +1,23 @@
 package uni.pu.fmi.data.entity;
 
+
 import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 
 @Entity
-public class SamplePerson extends AbstractEntity {
-
+public class SamplePerson extends AbstractEntity
+{
+    @NotNull
+    @NotBlank(message = "Въведете име")
     private String firstName;
+    @NotNull
+    @NotBlank(message = "Въведете фамилия")
     private String lastName;
-    @Email
+    @Email(message = "Въведете валидна електронна поща")
     private String email;
     private String phone;
     private LocalDate dateOfBirth;
@@ -17,52 +25,99 @@ public class SamplePerson extends AbstractEntity {
     private String role;
     private boolean important;
 
-    public String getFirstName() {
+
+    public String getFirstName()
+    {
         return firstName;
     }
-    public void setFirstName(String firstName) {
+
+
+    public void setFirstName(String firstName)
+    {
         this.firstName = firstName;
     }
-    public String getLastName() {
+
+
+    public String getLastName()
+    {
         return lastName;
     }
-    public void setLastName(String lastName) {
+
+
+    public void setLastName(String lastName)
+    {
         this.lastName = lastName;
     }
-    public String getEmail() {
+
+
+    public String getEmail()
+    {
         return email;
     }
-    public void setEmail(String email) {
+
+
+    public void setEmail(String email)
+    {
         this.email = email;
     }
-    public String getPhone() {
+
+
+    public String getPhone()
+    {
         return phone;
     }
-    public void setPhone(String phone) {
+
+
+    public void setPhone(String phone)
+    {
         this.phone = phone;
     }
-    public LocalDate getDateOfBirth() {
+
+
+    public LocalDate getDateOfBirth()
+    {
         return dateOfBirth;
     }
-    public void setDateOfBirth(LocalDate dateOfBirth) {
+
+
+    public void setDateOfBirth(LocalDate dateOfBirth)
+    {
         this.dateOfBirth = dateOfBirth;
     }
-    public String getOccupation() {
+
+
+    public String getOccupation()
+    {
         return occupation;
     }
-    public void setOccupation(String occupation) {
+
+
+    public void setOccupation(String occupation)
+    {
         this.occupation = occupation;
     }
-    public String getRole() {
+
+
+    public String getRole()
+    {
         return role;
     }
-    public void setRole(String role) {
+
+
+    public void setRole(String role)
+    {
         this.role = role;
     }
-    public boolean isImportant() {
+
+
+    public boolean isImportant()
+    {
         return important;
     }
-    public void setImportant(boolean important) {
+
+
+    public void setImportant(boolean important)
+    {
         this.important = important;
     }
 

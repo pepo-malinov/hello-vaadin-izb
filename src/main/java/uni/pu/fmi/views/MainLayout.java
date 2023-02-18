@@ -12,8 +12,8 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.theme.lumo.LumoUtility;
 import uni.pu.fmi.components.appnav.AppNav;
 import uni.pu.fmi.components.appnav.AppNavItem;
-import uni.pu.fmi.views.about.AboutView;
-import uni.pu.fmi.views.helloworld.HelloWorldView;
+import uni.pu.fmi.views.about.ItemsView;
+import uni.pu.fmi.views.helloworld.UsersView;
 
 /**
  * The main view is a top-level placeholder for other views.
@@ -53,8 +53,8 @@ public class MainLayout extends AppLayout {
         // For documentation, visit https://github.com/vaadin/vcf-nav#readme
         AppNav nav = new AppNav();
 
-        nav.addItem(new AppNavItem("Hello World", HelloWorldView.class, "la la-globe"));
-        nav.addItem(new AppNavItem("About", AboutView.class, "la la-file"));
+        nav.addItem(new AppNavItem("Потребители", UsersView.class, "la la-globe"));
+        nav.addItem(new AppNavItem("Items", ItemsView.class, "la la-file"));
 
         return nav;
     }
